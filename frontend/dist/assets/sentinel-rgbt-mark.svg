@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 310" role="img" aria-labelledby="title desc">
+  <title id="title">Sentinel RGBT 光伏双模态巡检标识</title>
+  <desc id="desc">无人机通过可见光与热红外扫描光伏组件热斑</desc>
+  <defs>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1768cb"/><stop offset=".36" stop-color="#36bce0"/>
+      <stop offset=".68" stop-color="#f1a13b"/><stop offset="1" stop-color="#ef5350"/>
+    </linearGradient>
+    <linearGradient id="airframe" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2689e0"/><stop offset="1" stop-color="#1357b8"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M50 139A126 126 0 0 1 290 139" fill="none" stroke="#b8dbe5" stroke-opacity=".2" stroke-width="18"/>
+  <path d="M50 139A126 126 0 0 1 290 139" fill="none" stroke="url(#spectrum)" stroke-width="10" stroke-linecap="round" filter="url(#softGlow)"/>
+  <circle cx="50" cy="139" r="5" fill="#1768cb" stroke="#fff" stroke-width="3"/><circle cx="170" cy="25" r="5" fill="#36bce0" stroke="#fff" stroke-width="3"/><circle cx="290" cy="139" r="5" fill="#ef5350" stroke="#fff" stroke-width="3"/>
+  <g stroke="#143c5a" stroke-width="8" stroke-linecap="round"><path d="M151 126L109 98M189 126l42-28M151 137l-42 27M189 137l42 27"/></g>
+  <g fill="none" stroke="#2b73d0" stroke-width="6"><ellipse cx="101" cy="92" rx="22" ry="8"/><ellipse cx="239" cy="92" rx="22" ry="8"/><ellipse cx="101" cy="170" rx="22" ry="8"/><ellipse cx="239" cy="170" rx="22" ry="8"/></g>
+  <g fill="#13b8a5"><circle cx="101" cy="92" r="5"/><circle cx="239" cy="92" r="5"/><circle cx="101" cy="170" r="5"/><circle cx="239" cy="170" r="5"/></g>
+  <rect x="136" y="108" width="68" height="50" rx="17" fill="#0e3f73"/><rect x="141" y="112" width="58" height="42" rx="14" fill="url(#airframe)"/>
+  <circle cx="170" cy="133" r="13" fill="#f8fcff" stroke="#5acbec" stroke-width="4"/><circle cx="170" cy="133" r="5" fill="#f28f3d"/>
+  <g fill="none" stroke-linecap="round"><path d="M151 160l-28 49M189 160l28 49" stroke="#56c6ea" stroke-width="5"/><path d="M170 161v47" stroke="#a0e8ee" stroke-width="4"/></g>
+  <rect x="76" y="210" width="188" height="75" rx="10" fill="#effaf9" stroke="#12afa5" stroke-width="8"/>
+  <g stroke="#12afa5" stroke-width="4"><path d="M123 214v67M170 214v67M217 214v67M80 247h180"/></g>
+  <g fill="none" stroke="#f28f3d" stroke-width="5" stroke-linecap="round"><circle cx="170" cy="247" r="14" fill="#f28f3d" stroke="none"/><circle cx="170" cy="247" r="5" fill="#fff" stroke="none"/><path d="M170 262v33M155 296a18 18 0 0 1 30 0"/></g>
+</svg>

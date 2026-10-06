@@ -1,0 +1,22 @@
+{
+  "model_id": "distributed_pv_yolo11n_v1",
+  "task": "detection",
+  "architecture": "YOLO11n",
+  "image_size": 320,
+  "epochs_requested": 15,
+  "batch_size": 64,
+  "metrics": {
+    "precision": 0.6921407895227326,
+    "recall": 0.6776061776061776,
+    "map50": 0.7034189097242267,
+    "map50_95": 0.449450487967671,
+    "per_class_map50_95": [
+      0.449450487967671
+    ]
+  },
+  "class_names": [
+    "solar-panel"
+  ],
+  "seed": 20260922,
+  "boundary": "\u53ef\u89c1\u5149\u56fe\u50cf\u7814\u7a76\u57fa\u7ebf\uff1b\u68c0\u6d4b\u6846\u662f\u5019\u9009\u76ee\u6807\uff0c\u4e0d\u80fd\u66ff\u4ee3\u4eba\u5de5\u590d\u6838\u6216\u7535\u6c14\u5b89\u5168\u7ed3\u8bba\u3002"
+}

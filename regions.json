@@ -1,0 +1,17 @@
+{
+  "regions": [
+    { "id": "app-shell", "kind": "chrome", "grid": "A0:J9", "container": true, "note": "full application frame with fog-white canvas" },
+    { "id": "sidebar", "kind": "chrome", "grid": "A0:B9", "container": true, "note": "charcoal grouped navigation and account rail" },
+    { "id": "brand", "kind": "text", "grid": "A0:B0", "note": "Sentinel RGBT product name" },
+    { "id": "primary-navigation", "kind": "control", "grid": "A1:B8", "note": "grouped operations navigation" },
+    { "id": "top-command-bar", "kind": "chrome", "grid": "C0:J0", "container": true, "note": "weather, global search, sync and user controls" },
+    { "id": "mission-context", "kind": "control", "grid": "C1:H1", "note": "site, mission and progress selectors" },
+    { "id": "field-map", "kind": "image", "grid": "C1:H5", "bleed": true, "note": "aerial photovoltaic field map intentionally crops to the map viewport" },
+    { "id": "map-controls", "kind": "control", "grid": "C2:H5", "note": "layers, zoom, legend, route and map metadata over the field map" },
+    { "id": "anomaly-priority", "kind": "control", "grid": "I1:J9", "note": "filterable anomaly evidence priority rail" },
+    { "id": "mission-readiness", "kind": "control", "grid": "C6:E6", "note": "compact UAV, positioning, signal and overlap state strip" },
+    { "id": "health-trend", "kind": "control", "grid": "C7:E9", "note": "accessible multi-series asset health chart and current values" },
+    { "id": "work-orders", "kind": "control", "grid": "F6:H9", "note": "current work-order table with status and ownership" },
+    { "id": "system-footer", "kind": "text", "grid": "C9:J9", "note": "data freshness, mission duration, mileage, imagery count and user" }
+  ]
+}

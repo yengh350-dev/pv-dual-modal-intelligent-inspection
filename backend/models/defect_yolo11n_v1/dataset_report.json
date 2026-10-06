@@ -1,0 +1,38 @@
+{
+  "task": "visible_defect_detection",
+  "seed": 20260922,
+  "classes": [
+    "Crack",
+    "Grid",
+    "Spot"
+  ],
+  "splits": {
+    "train": {
+      "images": 1536,
+      "boxes": 1680,
+      "class_boxes": {
+        "Crack": 568,
+        "Grid": 564,
+        "Spot": 548
+      }
+    },
+    "val": {
+      "images": 384,
+      "boxes": 420,
+      "class_boxes": {
+        "Crack": 144,
+        "Grid": 140,
+        "Spot": 136
+      }
+    },
+    "test": {
+      "images": 480,
+      "boxes": 528,
+      "class_boxes": {
+        "Crack": 180,
+        "Grid": 180,
+        "Spot": 168
+      }
+    }
+  }
+}

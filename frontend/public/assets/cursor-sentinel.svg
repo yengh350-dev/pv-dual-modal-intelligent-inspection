@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <filter id="halo" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.1"/>
+    </filter>
+  </defs>
+  <path d="M5 3.5 25.2 15.7l-8.5 2.1-4.1 8.5z" fill="#53d9ea" opacity=".8" filter="url(#halo)"/>
+  <path d="M5 3.5 25.2 15.7l-8.5 2.1-4.1 8.5z" fill="#071316" stroke="#f6fffd" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m16.7 17.8 4.4 7.1" fill="none" stroke="#48d6e3" stroke-width="2" stroke-linecap="round"/>
+</svg>

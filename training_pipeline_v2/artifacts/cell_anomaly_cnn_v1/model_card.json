@@ -1,0 +1,46 @@
+{
+  "model_id": "cell_anomaly_cnn_v1",
+  "task": "multilabel_classification",
+  "architecture": "4-block compact CNN",
+  "classes": [
+    "poly_wafer",
+    "crack",
+    "inactive"
+  ],
+  "input": {
+    "channels": 1,
+    "size": [
+      128,
+      128
+    ]
+  },
+  "seed": 20260922,
+  "best_validation_macro_f1": 0.7429586353862709,
+  "test": {
+    "macro_f1": 0.7425254086267206,
+    "exact_match_accuracy": 0.7781456953642384,
+    "per_class": {
+      "poly_wafer": {
+        "precision": 1.0,
+        "recall": 0.9720670391061452,
+        "f1": 0.9858356940509915,
+        "support": 179
+      },
+      "crack": {
+        "precision": 0.6582278481012658,
+        "recall": 0.7761194029850746,
+        "f1": 0.7123287671232876,
+        "support": 67
+      },
+      "inactive": {
+        "precision": 0.375,
+        "recall": 0.9,
+        "f1": 0.5294117647058825,
+        "support": 20
+      }
+    },
+    "loss": 0.2383559691590189
+  },
+  "epochs_completed": 20,
+  "boundary": "电致发光电池片图像模型，不适用于无人机 RGB 或热红外场景。"
+}

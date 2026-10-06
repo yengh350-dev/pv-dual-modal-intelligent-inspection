@@ -1,0 +1,25 @@
+{
+  "model_id": "defect_yolo11n_v1",
+  "task": "detection",
+  "architecture": "YOLO11n",
+  "image_size": 416,
+  "epochs_requested": 45,
+  "metrics": {
+    "precision": 0.8868208641845207,
+    "recall": 0.7729987808364339,
+    "map50": 0.8383666647925776,
+    "map50_95": 0.40457245865393376,
+    "per_class_map50_95": [
+      0.3674117754470902,
+      0.4212791125999676,
+      0.4250264879147439
+    ]
+  },
+  "class_names": [
+    "Crack",
+    "Grid",
+    "Spot"
+  ],
+  "seed": 20260922,
+  "boundary": "可见光裂纹、栅线与斑点候选检测基线；不提供温度信息，不能单独确认热斑，现场使用前需做跨场站复核。"
+}

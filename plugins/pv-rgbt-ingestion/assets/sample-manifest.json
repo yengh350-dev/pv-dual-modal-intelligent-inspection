@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "missionId": "MSN-DEMO-001",
+  "site": "盐城一期光伏场",
+  "aircraft": "Mavic 3T",
+  "payload": "Integrated RGB + Thermal",
+  "timezone": "Asia/Shanghai",
+  "crs": "WGS84",
+  "frames": [
+    {
+      "pairId": "PAIR-0001",
+      "modality": "RGB",
+      "path": "RGB/PAIR-0001.jpg",
+      "timestamp": "2026-09-05T09:57:24.120+08:00",
+      "latitude": 31.0426,
+      "longitude": 120.6982,
+      "altitudeM": 48.7
+    },
+    {
+      "pairId": "PAIR-0001",
+      "modality": "THERMAL",
+      "path": "THERMAL/PAIR-0001.jpg",
+      "timestamp": "2026-09-05T09:57:24.182+08:00",
+      "latitude": 31.0426,
+      "longitude": 120.6982,
+      "altitudeM": 48.7
+    }
+  ]
+}

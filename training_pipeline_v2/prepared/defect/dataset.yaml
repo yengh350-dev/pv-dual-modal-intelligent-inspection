@@ -1,0 +1,8 @@
+path: /Users/heyanfeng/Desktop/STUDY/科研/基于 RGB-Thermal 双模态融合的光伏组件缺陷检测与热斑识别/平台系统_完整版/training_pipeline_v2/prepared/defect
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: Crack
+  1: Grid
+  2: Spot

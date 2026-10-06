@@ -1,0 +1,14 @@
+{
+  "task": "cell_multilabel_classification",
+  "seed": 20260922,
+  "classes": [
+    "poly_wafer",
+    "crack",
+    "inactive"
+  ],
+  "splits": {
+    "test": 302,
+    "val": 302,
+    "train": 1396
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "model_id": "pv_power_hgb_v1",
+  "task": "power_regression",
+  "algorithm": "HistGradientBoostingRegressor",
+  "split_policy": "chronological 70/15/15",
+  "metrics": {
+    "val": {
+      "samples": 1500,
+      "mae": 5.876794950286834,
+      "rmse": 11.560692861745745,
+      "r2": 0.9863414118789041
+    },
+    "test": {
+      "samples": 1500,
+      "mae": 6.299413112398161,
+      "rmse": 12.242968319544259,
+      "r2": 0.985820255994061
+    }
+  },
+  "features": [
+    "AmbiTemp",
+    "Irradiance",
+    "ModuleTemp",
+    "InclAngle",
+    "Humidity",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "boundary": "样本数据验证模型；跨场站使用前需用真实辐照、组件温度和功率数据重新标定。"
+}

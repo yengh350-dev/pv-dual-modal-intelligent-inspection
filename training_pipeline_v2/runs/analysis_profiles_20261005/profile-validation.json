@@ -1,0 +1,285 @@
+{
+  "weightsSha256": "d7f7ecff0192fd9cbfb360926eecf8db38cfbb5e3359dc01d61bc3fbc2050ae2",
+  "dataset": {
+    "yamlSha256": "1d58e9b140ccfc2fdedc0860a9c6c96c1ac8ca6210fcfc8e5e27fd299e419833",
+    "splitSha256": {
+      "train": "66bcc649dcd6ff1a5b84937560f35c6268b61002e151b7fee68287571a6ed710",
+      "val": "a1e4e5f98bb48f2aca3db70c72573f53d9bafad1ddf4a19ccbe3b7bf82a9f990",
+      "test": "a7f7ff3c86cfb8bf0ced1fb0c72be967248e579b195745ab622f005828f15568"
+    },
+    "imageCounts": {
+      "train": 1148,
+      "val": 140,
+      "test": 140
+    },
+    "frameGroupSize": 10,
+    "overlapChecked": true,
+    "labels": {
+      "train": {
+        "classBoxes": {
+          "GB": 182,
+          "hotspot": 2498,
+          "PID": 257,
+          "diode": 356,
+          "zhedang": 170
+        },
+        "boxSizeCounts": {
+          "smallBelow32Squared": 2945,
+          "mediumBelow96Squared": 493,
+          "large": 25
+        }
+      },
+      "val": {
+        "classBoxes": {
+          "GB": 22,
+          "hotspot": 273,
+          "PID": 38,
+          "diode": 43,
+          "zhedang": 22
+        },
+        "boxSizeCounts": {
+          "smallBelow32Squared": 342,
+          "mediumBelow96Squared": 56,
+          "large": 0
+        }
+      },
+      "test": {
+        "classBoxes": {
+          "GB": 21,
+          "hotspot": 291,
+          "PID": 41,
+          "diode": 51,
+          "zhedang": 22
+        },
+        "boxSizeCounts": {
+          "smallBelow32Squared": 355,
+          "mediumBelow96Squared": 68,
+          "large": 3
+        }
+      }
+    },
+    "adjacentGroupCounts": {
+      "train/val": 16,
+      "train/test": 21,
+      "val/test": 4
+    },
+    "generalizationBoundary": "Frame groups are disjoint, not guaranteed independent flights or sites. Neighboring groups may remain correlated."
+  },
+  "validation": [
+    {
+      "id": "native_416",
+      "imageSize": 416,
+      "augment": false,
+      "iou": 0.7,
+      "split": "val",
+      "precision": 0.8279673963725763,
+      "recall": 0.5639226572507402,
+      "map50": 0.6269172844512532,
+      "map50_95": 0.28237821528235335,
+      "perClass": {
+        "GB": {
+          "precision": 0.9134893085468517,
+          "recall": 0.6363636363636364,
+          "map50": 0.685055179626043,
+          "map50_95": 0.3469007056660273
+        },
+        "hotspot": {
+          "precision": 0.7612084987842143,
+          "recall": 0.7006080564773578,
+          "map50": 0.7290856941571726,
+          "map50_95": 0.20078543588749312
+        },
+        "PID": {
+          "precision": 0.7317160819527432,
+          "recall": 0.6052631578947368,
+          "map50": 0.7410132581124742,
+          "map50_95": 0.4103026978950811
+        },
+        "diode": {
+          "precision": 0.8571635793500235,
+          "recall": 0.6046511627906976,
+          "map50": 0.685702262733535,
+          "map50_95": 0.367468793032759
+        },
+        "zhedang": {
+          "precision": 0.876259513229049,
+          "recall": 0.2727272727272727,
+          "map50": 0.2937300276270406,
+          "map50_95": 0.08643344393040604
+        }
+      },
+      "recommendedConfidence": 0.4014014014014014,
+      "speedMs": {
+        "preprocess": 0.0689732214285778,
+        "inference": 7.221412199999985,
+        "loss": 5.8021428550603105e-05,
+        "postprocess": 0.11651427857144776
+      },
+      "elapsedSeconds": 11.62
+    },
+    {
+      "id": "preview_320",
+      "imageSize": 320,
+      "augment": false,
+      "iou": 0.7,
+      "split": "val",
+      "precision": 0.7169979913676408,
+      "recall": 0.4895399650897211,
+      "map50": 0.5574239895511657,
+      "map50_95": 0.23576243002464026,
+      "perClass": {
+        "GB": {
+          "precision": 0.7571387348389079,
+          "recall": 0.5,
+          "map50": 0.5638352732538779,
+          "map50_95": 0.23190489474000073
+        },
+        "hotspot": {
+          "precision": 0.7809991252175998,
+          "recall": 0.6400888317911001,
+          "map50": 0.7224787524827175,
+          "map50_95": 0.20758620309618778
+        },
+        "PID": {
+          "precision": 0.6941791469793348,
+          "recall": 0.5,
+          "map50": 0.6272946321982171,
+          "map50_95": 0.34629998252942457
+        },
+        "diode": {
+          "precision": 0.8540025093200095,
+          "recall": 0.5348837209302325,
+          "map50": 0.6346200276610339,
+          "map50_95": 0.33232193259584164
+        },
+        "zhedang": {
+          "precision": 0.4986704404823517,
+          "recall": 0.2727272727272727,
+          "map50": 0.2388912621599819,
+          "map50_95": 0.060699137161746505
+        }
+      },
+      "recommendedConfidence": 0.38538538538538536,
+      "speedMs": {
+        "preprocess": 0.03166190714284209,
+        "inference": 5.144102385714268,
+        "loss": 5.328571427907848e-05,
+        "postprocess": 0.09982441428572235
+      },
+      "elapsedSeconds": 0.96
+    },
+    {
+      "id": "precision_640",
+      "imageSize": 640,
+      "augment": false,
+      "iou": 0.7,
+      "split": "val",
+      "precision": 0.6634381462986694,
+      "recall": 0.5470280433560728,
+      "map50": 0.5492903263376818,
+      "map50_95": 0.26186242570466556,
+      "perClass": {
+        "GB": {
+          "precision": 0.7058495253851136,
+          "recall": 0.5,
+          "map50": 0.5714910538224165,
+          "map50_95": 0.3199048578023548
+        },
+        "hotspot": {
+          "precision": 0.5623727997578459,
+          "recall": 0.717948717948718,
+          "map50": 0.6279455406699012,
+          "map50_95": 0.17372610547197884
+        },
+        "PID": {
+          "precision": 0.5790838423775644,
+          "recall": 0.6842105263157895,
+          "map50": 0.655188274343165,
+          "map50_95": 0.3786318436910966
+        },
+        "diode": {
+          "precision": 0.8220560547151059,
+          "recall": 0.6511627906976745,
+          "map50": 0.6832335469344213,
+          "map50_95": 0.38277482348140945
+        },
+        "zhedang": {
+          "precision": 0.6478285092577176,
+          "recall": 0.18181818181818182,
+          "map50": 0.20859321591850513,
+          "map50_95": 0.05427449807648808
+        }
+      },
+      "recommendedConfidence": 0.25625625625625625,
+      "speedMs": {
+        "preprocess": 0.15344702142856548,
+        "inference": 14.663083942857153,
+        "loss": 4.5535714323006816e-05,
+        "postprocess": 0.11345801428572141
+      },
+      "elapsedSeconds": 2.28
+    }
+  ],
+  "policy": "Select resolution on validation only; freeze choice before test. Never change weights. No cross-site claim.",
+  "frozenPrecisionSelection": {
+    "id": "native_416",
+    "imageSize": 416,
+    "augment": false,
+    "iou": 0.7
+  },
+  "test": [
+    {
+      "id": "native_416",
+      "imageSize": 416,
+      "augment": false,
+      "iou": 0.7,
+      "split": "test",
+      "precision": 0.6440991380428468,
+      "recall": 0.6488305020328007,
+      "map50": 0.6767448975744078,
+      "map50_95": 0.28211873156679185,
+      "perClass": {
+        "GB": {
+          "precision": 0.5659874077494923,
+          "recall": 0.621071662274856,
+          "map50": 0.6669116698334091,
+          "map50_95": 0.30438766923506694
+        },
+        "hotspot": {
+          "precision": 0.6634335123589304,
+          "recall": 0.5554563663894772,
+          "map50": 0.598178249551022,
+          "map50_95": 0.15871627438066951
+        },
+        "PID": {
+          "precision": 0.5316952154884321,
+          "recall": 0.6924016651003833,
+          "map50": 0.6547740451341155,
+          "map50_95": 0.34299722976976416
+        },
+        "diode": {
+          "precision": 0.6854578248958244,
+          "recall": 0.7843137254901961,
+          "map50": 0.7896935022802797,
+          "map50_95": 0.41948749642426353
+        },
+        "zhedang": {
+          "precision": 0.7739217297215543,
+          "recall": 0.5909090909090909,
+          "map50": 0.674167021073213,
+          "map50_95": 0.1850049880241949
+        }
+      },
+      "recommendedConfidence": 0.35735735735735735,
+      "speedMs": {
+        "preprocess": 0.05116398571430076,
+        "inference": 7.419881257142866,
+        "loss": 4.58357143224524e-05,
+        "postprocess": 0.11043780000000884
+      },
+      "elapsedSeconds": 1.37
+    }
+  ],
+  "recommendedPrecisionSize": 416,
+  "boundary": "320 为临时预览；640 不通过逐类不回退门控时正式检测保留 416。不得用本测试调参。"
+}

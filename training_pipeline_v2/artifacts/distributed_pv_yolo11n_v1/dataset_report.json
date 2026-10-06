@@ -1,0 +1,22 @@
+{
+  "task": "distributed_pv_detection",
+  "seed": 20260922,
+  "split_policy": "publisher-provided",
+  "splits": {
+    "train": {
+      "images": 2701,
+      "objects": 5903,
+      "source_groups": 2701
+    },
+    "val": {
+      "images": 883,
+      "objects": 1854,
+      "source_groups": 883
+    },
+    "test": {
+      "images": 423,
+      "objects": 1037,
+      "source_groups": 423
+    }
+  }
+}

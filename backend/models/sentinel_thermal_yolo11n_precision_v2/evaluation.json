@@ -1,0 +1,297 @@
+{
+  "createdAt": "2026-10-04T11:57:58.686621+00:00",
+  "sourceWeightsSha256": "2f9a7ae34d46603a77b717c265c64c235169932d49ba584db16988270a304775",
+  "dataset": {
+    "yamlSha256": "1d58e9b140ccfc2fdedc0860a9c6c96c1ac8ca6210fcfc8e5e27fd299e419833",
+    "splitSha256": {
+      "train": "66bcc649dcd6ff1a5b84937560f35c6268b61002e151b7fee68287571a6ed710",
+      "val": "a1e4e5f98bb48f2aca3db70c72573f53d9bafad1ddf4a19ccbe3b7bf82a9f990",
+      "test": "a7f7ff3c86cfb8bf0ced1fb0c72be967248e579b195745ab622f005828f15568"
+    },
+    "imageCounts": {
+      "train": 1148,
+      "val": 140,
+      "test": 140
+    },
+    "frameGroupSize": 10,
+    "overlapChecked": true,
+    "labels": {
+      "train": {
+        "classBoxes": {
+          "GB": 182,
+          "hotspot": 2498,
+          "PID": 257,
+          "diode": 356,
+          "zhedang": 170
+        },
+        "boxSizeCounts": {
+          "smallBelow32Squared": 2945,
+          "mediumBelow96Squared": 493,
+          "large": 25
+        }
+      },
+      "val": {
+        "classBoxes": {
+          "GB": 22,
+          "hotspot": 273,
+          "PID": 38,
+          "diode": 43,
+          "zhedang": 22
+        },
+        "boxSizeCounts": {
+          "smallBelow32Squared": 342,
+          "mediumBelow96Squared": 56,
+          "large": 0
+        }
+      },
+      "test": {
+        "classBoxes": {
+          "GB": 21,
+          "hotspot": 291,
+          "PID": 41,
+          "diode": 51,
+          "zhedang": 22
+        },
+        "boxSizeCounts": {
+          "smallBelow32Squared": 355,
+          "mediumBelow96Squared": 68,
+          "large": 3
+        }
+      }
+    },
+    "adjacentGroupCounts": {
+      "train/val": 16,
+      "train/test": 21,
+      "val/test": 4
+    },
+    "generalizationBoundary": "Frame groups are disjoint, not guaranteed independent flights or sites. Neighboring groups may remain correlated."
+  },
+  "epochsRequested": 4,
+  "trainingSettings": {
+    "imageSize": 416,
+    "freeze": 0,
+    "lr0": 0.0001,
+    "hsv_h": 0,
+    "hsv_s": 0,
+    "mosaic": 0,
+    "seed": 20261004
+  },
+  "policy": "Freeze trained best.pt using validation only. Test baseline/candidate for deployment acceptance, never tune on test. Preserve original weights.",
+  "candidateWeightsSha256": "d7f7ecff0192fd9cbfb360926eecf8db38cfbb5e3359dc01d61bc3fbc2050ae2",
+  "validation": [
+    {
+      "id": "baseline_416",
+      "imageSize": 416,
+      "augment": false,
+      "iou": 0.7,
+      "split": "val",
+      "precision": 0.7888611158493831,
+      "recall": 0.5846458907439727,
+      "map50": 0.6058408155632613,
+      "map50_95": 0.2723413868176493,
+      "perClass": {
+        "GB": {
+          "precision": 0.8181859573902449,
+          "recall": 0.6363636363636364,
+          "map50": 0.6979333246315904,
+          "map50_95": 0.3586187963469825
+        },
+        "hotspot": {
+          "precision": 0.6900523565494658,
+          "recall": 0.684981684981685,
+          "map50": 0.6566203514684397,
+          "map50_95": 0.19209515278990413
+        },
+        "PID": {
+          "precision": 0.5888851350285773,
+          "recall": 0.7368421052631579,
+          "map50": 0.7140121115488279,
+          "map50_95": 0.3706147521857871
+        },
+        "diode": {
+          "precision": 0.8471821302786275,
+          "recall": 0.6046511627906976,
+          "map50": 0.6525502810106395,
+          "map50_95": 0.34668662512654214
+        },
+        "zhedang": {
+          "precision": 1.0,
+          "recall": 0.26039086432068564,
+          "map50": 0.30808800915680934,
+          "map50_95": 0.09369160763903069
+        }
+      },
+      "recommendedConfidence": 0.35135135135135137,
+      "speedMs": {
+        "preprocess": 0.052552671428632694,
+        "inference": 7.402630657142595,
+        "loss": 4.7014286102304534e-05,
+        "postprocess": 0.11211666428607714
+      },
+      "elapsedSeconds": 1.27
+    },
+    {
+      "id": "finetuned_416",
+      "imageSize": 416,
+      "augment": false,
+      "iou": 0.7,
+      "split": "val",
+      "precision": 0.8279673963725763,
+      "recall": 0.5639226572507402,
+      "map50": 0.6269172844512532,
+      "map50_95": 0.28237821528235335,
+      "perClass": {
+        "GB": {
+          "precision": 0.9134893085468517,
+          "recall": 0.6363636363636364,
+          "map50": 0.685055179626043,
+          "map50_95": 0.3469007056660273
+        },
+        "hotspot": {
+          "precision": 0.7612084987842143,
+          "recall": 0.7006080564773578,
+          "map50": 0.7290856941571726,
+          "map50_95": 0.20078543588749312
+        },
+        "PID": {
+          "precision": 0.7317160819527432,
+          "recall": 0.6052631578947368,
+          "map50": 0.7410132581124742,
+          "map50_95": 0.4103026978950811
+        },
+        "diode": {
+          "precision": 0.8571635793500235,
+          "recall": 0.6046511627906976,
+          "map50": 0.685702262733535,
+          "map50_95": 0.367468793032759
+        },
+        "zhedang": {
+          "precision": 0.876259513229049,
+          "recall": 0.2727272727272727,
+          "map50": 0.2937300276270406,
+          "map50_95": 0.08643344393040604
+        }
+      },
+      "recommendedConfidence": 0.4014014014014014,
+      "speedMs": {
+        "preprocess": 0.05073780000048243,
+        "inference": 7.356712207142582,
+        "loss": 5.029285716773302e-05,
+        "postprocess": 0.10946458571408714
+      },
+      "elapsedSeconds": 1.26
+    }
+  ],
+  "validationEligible": true,
+  "frozenCandidate": {
+    "id": "finetuned_416",
+    "imageSize": 416,
+    "augment": false,
+    "iou": 0.7
+  },
+  "deploymentEligible": true,
+  "test": [
+    {
+      "id": "baseline_416",
+      "imageSize": 416,
+      "augment": false,
+      "iou": 0.7,
+      "split": "test",
+      "precision": 0.6394715769441711,
+      "recall": 0.5960591199242858,
+      "map50": 0.646970170589886,
+      "map50_95": 0.26301555260982395,
+      "perClass": {
+        "GB": {
+          "precision": 0.5607028791120031,
+          "recall": 0.5714285714285714,
+          "map50": 0.6599597471723745,
+          "map50_95": 0.3206233317431653
+        },
+        "hotspot": {
+          "precision": 0.656595949988672,
+          "recall": 0.5292096219931272,
+          "map50": 0.5671073592422866,
+          "map50_95": 0.14934720494026116
+        },
+        "PID": {
+          "precision": 0.48312489119775426,
+          "recall": 0.7317073170731707,
+          "map50": 0.6614187844787702,
+          "map50_95": 0.324789822205463
+        },
+        "diode": {
+          "precision": 0.7551254004241954,
+          "recall": 0.7843137254901961,
+          "map50": 0.7760822701721685,
+          "map50_95": 0.3934000824400628
+        },
+        "zhedang": {
+          "precision": 0.7418087639982301,
+          "recall": 0.36363636363636365,
+          "map50": 0.5702826918838302,
+          "map50_95": 0.1269173217201674
+        }
+      },
+      "recommendedConfidence": 0.3333333333333333,
+      "speedMs": {
+        "preprocess": 0.047124100000165266,
+        "inference": 7.373150285714303,
+        "loss": 5.2378571321501764e-05,
+        "postprocess": 0.11377797857180992
+      },
+      "elapsedSeconds": 1.39
+    },
+    {
+      "id": "finetuned_416",
+      "imageSize": 416,
+      "augment": false,
+      "iou": 0.7,
+      "split": "test",
+      "precision": 0.6440991380428468,
+      "recall": 0.6488305020328007,
+      "map50": 0.6767448975744078,
+      "map50_95": 0.28211873156679185,
+      "perClass": {
+        "GB": {
+          "precision": 0.5659874077494923,
+          "recall": 0.621071662274856,
+          "map50": 0.6669116698334091,
+          "map50_95": 0.30438766923506694
+        },
+        "hotspot": {
+          "precision": 0.6634335123589304,
+          "recall": 0.5554563663894772,
+          "map50": 0.598178249551022,
+          "map50_95": 0.15871627438066951
+        },
+        "PID": {
+          "precision": 0.5316952154884321,
+          "recall": 0.6924016651003833,
+          "map50": 0.6547740451341155,
+          "map50_95": 0.34299722976976416
+        },
+        "diode": {
+          "precision": 0.6854578248958244,
+          "recall": 0.7843137254901961,
+          "map50": 0.7896935022802797,
+          "map50_95": 0.41948749642426353
+        },
+        "zhedang": {
+          "precision": 0.7739217297215543,
+          "recall": 0.5909090909090909,
+          "map50": 0.674167021073213,
+          "map50_95": 0.1850049880241949
+        }
+      },
+      "recommendedConfidence": 0.35735735735735735,
+      "speedMs": {
+        "preprocess": 0.050649107143182645,
+        "inference": 7.34101488571436,
+        "loss": 5.118571420682981e-05,
+        "postprocess": 0.10663479999988924
+      },
+      "elapsedSeconds": 1.33
+    }
+  ]
+}

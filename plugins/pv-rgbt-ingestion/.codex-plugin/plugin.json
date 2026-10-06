@@ -1,0 +1,18 @@
+{
+  "name": "pv-rgbt-ingestion",
+  "version": "0.1.0",
+  "description": "Validate RGB-Thermal photovoltaic inspection mission packages before platform ingestion.",
+  "author": {
+    "name": "Sentinel RGBT Project"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PV RGBT Ingestion",
+    "shortDescription": "Audit UAV RGB-Thermal mission packages.",
+    "longDescription": "Checks mission manifests, RGB/Thermal pairing, required telemetry and file references before data enters Sentinel RGBT.",
+    "developerName": "Sentinel RGBT Project",
+    "category": "Developer Tools",
+    "capabilities": ["Mission manifest validation", "RGB-Thermal pairing audit", "Ingestion readiness report"],
+    "defaultPrompt": "Validate this photovoltaic RGB-Thermal UAV mission package and explain every blocking issue in plain Chinese."
+  }
+}

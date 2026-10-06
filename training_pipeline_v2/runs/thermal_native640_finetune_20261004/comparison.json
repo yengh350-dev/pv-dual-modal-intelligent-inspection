@@ -1,0 +1,134 @@
+{
+  "createdAt": "2026-10-04T11:46:47.726006+00:00",
+  "sourceWeightsSha256": "2f9a7ae34d46603a77b717c265c64c235169932d49ba584db16988270a304775",
+  "dataset": {
+    "yamlSha256": "1d58e9b140ccfc2fdedc0860a9c6c96c1ac8ca6210fcfc8e5e27fd299e419833",
+    "splitSha256": {
+      "train": "66bcc649dcd6ff1a5b84937560f35c6268b61002e151b7fee68287571a6ed710",
+      "val": "a1e4e5f98bb48f2aca3db70c72573f53d9bafad1ddf4a19ccbe3b7bf82a9f990",
+      "test": "a7f7ff3c86cfb8bf0ced1fb0c72be967248e579b195745ab622f005828f15568"
+    },
+    "imageCounts": {
+      "train": 1148,
+      "val": 140,
+      "test": 140
+    },
+    "frameGroupSize": 10,
+    "overlapChecked": true
+  },
+  "epochsRequested": 8,
+  "policy": "Freeze trained best.pt using validation only. Test baseline/candidate for deployment acceptance, never tune on test. Preserve original weights.",
+  "candidateWeightsSha256": "15c61b47fe0a2b1abf1a49c750c58a5ba646301798035337bf91219bc5471c12",
+  "validation": [
+    {
+      "id": "baseline_416",
+      "imageSize": 416,
+      "augment": false,
+      "iou": 0.7,
+      "split": "val",
+      "precision": 0.7888611158493831,
+      "recall": 0.5846458907439727,
+      "map50": 0.6058408155632613,
+      "map50_95": 0.2723413868176493,
+      "perClass": {
+        "GB": {
+          "precision": 0.8181859573902449,
+          "recall": 0.6363636363636364,
+          "map50": 0.6979333246315904,
+          "map50_95": 0.3586187963469825
+        },
+        "hotspot": {
+          "precision": 0.6900523565494658,
+          "recall": 0.684981684981685,
+          "map50": 0.6566203514684397,
+          "map50_95": 0.19209515278990413
+        },
+        "PID": {
+          "precision": 0.5888851350285773,
+          "recall": 0.7368421052631579,
+          "map50": 0.7140121115488279,
+          "map50_95": 0.3706147521857871
+        },
+        "diode": {
+          "precision": 0.8471821302786275,
+          "recall": 0.6046511627906976,
+          "map50": 0.6525502810106395,
+          "map50_95": 0.34668662512654214
+        },
+        "zhedang": {
+          "precision": 1.0,
+          "recall": 0.26039086432068564,
+          "map50": 0.30808800915680934,
+          "map50_95": 0.09369160763903069
+        }
+      },
+      "recommendedConfidence": 0.35135135135135137,
+      "speedMs": {
+        "preprocess": 0.051436292856773695,
+        "inference": 7.325890185715674,
+        "loss": 6.192142661477971e-05,
+        "postprocess": 0.10718988571462822
+      },
+      "elapsedSeconds": 1.28
+    },
+    {
+      "id": "finetuned_640",
+      "imageSize": 640,
+      "augment": false,
+      "iou": 0.7,
+      "split": "val",
+      "precision": 0.7350573476438845,
+      "recall": 0.556822998054194,
+      "map50": 0.5758845691807213,
+      "map50_95": 0.26325672482717005,
+      "perClass": {
+        "GB": {
+          "precision": 0.7855229458720756,
+          "recall": 0.4994723658896632,
+          "map50": 0.585939990129458,
+          "map50_95": 0.30547856877679413
+        },
+        "hotspot": {
+          "precision": 0.6973067322888362,
+          "recall": 0.7088261916376296,
+          "map50": 0.6604472065603375,
+          "map50_95": 0.1786973130778255
+        },
+        "PID": {
+          "precision": 0.7733616857281229,
+          "recall": 0.6286705553652417,
+          "map50": 0.655028113642846,
+          "map50_95": 0.35393395968336
+        },
+        "diode": {
+          "precision": 0.7407921960745413,
+          "recall": 0.6744186046511628,
+          "map50": 0.6704183620013757,
+          "map50_95": 0.38940385234947866
+        },
+        "zhedang": {
+          "precision": 0.6783031782558465,
+          "recall": 0.2727272727272727,
+          "map50": 0.30758917356958915,
+          "map50_95": 0.08876993024839183
+        }
+      },
+      "recommendedConfidence": 0.2972972972972973,
+      "speedMs": {
+        "preprocess": 0.11731458571375697,
+        "inference": 14.717581542859243,
+        "loss": 5.297857309674977e-05,
+        "postprocess": 0.12673215714309144
+      },
+      "elapsedSeconds": 2.29
+    }
+  ],
+  "validationEligible": false,
+  "frozenCandidate": {
+    "id": "finetuned_640",
+    "imageSize": 640,
+    "augment": false,
+    "iou": 0.7
+  },
+  "deploymentEligible": false
+}

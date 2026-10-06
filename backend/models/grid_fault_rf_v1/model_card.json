@@ -1,0 +1,37 @@
+{
+  "model_id": "grid_fault_rf_v1",
+  "task": "grid_fault_classification",
+  "algorithm": "StandardScaler + RandomForest",
+  "classes": [
+    "F0L",
+    "F0M",
+    "F1L",
+    "F1M",
+    "F2L",
+    "F2M",
+    "F3L",
+    "F3M",
+    "F4L",
+    "F4M",
+    "F5L",
+    "F5M",
+    "F6L",
+    "F6M",
+    "F7L",
+    "F7M"
+  ],
+  "split_policy": "each operating trace chronological 60/20/20",
+  "metrics": {
+    "val": {
+      "windows": 841,
+      "accuracy": 0.8941736028537456,
+      "macro_f1": 0.8793974868101999
+    },
+    "test": {
+      "windows": 854,
+      "accuracy": 0.8009367681498829,
+      "macro_f1": 0.7645472373940467
+    }
+  },
+  "boundary": "同一仿真来源内的时间外推评估，不代表跨逆变器、跨电站泛化；现场部署前必须采集真实电气波形验证。"
+}

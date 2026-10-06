@@ -1,0 +1,51 @@
+{
+  "model_id": "sentinel_rgbt_yolo11n_v1",
+  "created_at": "2026-09-21T16:24:29.117352+00:00",
+  "architecture": "yolo11n.pt",
+  "task": "thermal photovoltaic defect detection",
+  "class_names": [
+    "GB",
+    "hotspot",
+    "PID",
+    "diode",
+    "zhedang"
+  ],
+  "dataset": "/Users/heyanfeng/Desktop/STUDY/科研/基于 RGB-Thermal 双模态融合的光伏组件缺陷检测与热斑识别/光伏红外巡检数据集YOLO数据集/prepared/v1/dataset.yaml",
+  "split": "independent_test",
+  "epochs_requested": 60,
+  "image_size": 416,
+  "batch_size": 64,
+  "device": "cpu",
+  "seed": 20260921,
+  "metrics": {
+    "precision": 0.6626808153011673,
+    "recall": 0.6179609444512734,
+    "map50": 0.6604455737367237,
+    "map50_95": 0.2692633730752489,
+    "per_class_map50_95": {
+      "GB": 0.31035274333264096,
+      "hotspot": 0.1406249670949686,
+      "PID": 0.3361970681202531,
+      "diode": 0.4227764713720078,
+      "zhedang": 0.13636561545637418
+    }
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.04923749448997634,
+    "inference": 7.118297316732684,
+    "loss": 1.9936955400875638e-05,
+    "postprocess": 0.1012660696038178
+  },
+  "duration_seconds": 6429.61,
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.7.1",
+    "ultralytics": "8.4.157",
+    "mps_available": false
+  },
+  "limitations": [
+    "The supplied dataset contains thermal imagery only; this checkpoint is not an RGB-Thermal fusion model.",
+    "Engineering fault decisions still require radiometric temperature metadata and human review.",
+    "Independent field-station validation is required before production use."
+  ]
+}

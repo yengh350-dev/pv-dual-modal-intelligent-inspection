@@ -1,0 +1,34 @@
+export type EvidenceAsset = {
+  eventId: string;
+  rgb: string;
+  thermal: string;
+  modelSample: string;
+  source: string;
+  frame: string;
+  temperatureC: number;
+  capturedAt: string;
+  paired: true;
+  imageSize: { width: number; height: number };
+  detection: { x: number; y: number; width: number; height: number; hotspotX: number; hotspotY: number };
+};
+
+const alignedPair = {
+  rgb: '/assets/evidence-rgb.png',
+  thermal: '/assets/evidence-thermal.png',
+  source: '同视场 RGB-T 对齐演示帧 · 1586×992 · 非现场工程结论',
+  paired: true as const,
+  imageSize: { width: 1586, height: 992 },
+  detection: { x: 410, y: 180, width: 310, height: 515, hotspotX: 567, hotspotY: 585 },
+};
+
+const evidenceAssets: Record<string, EvidenceAsset> = {
+  'EVT-240905-018': { ...alignedPair, eventId: 'EVT-240905-018', modelSample: '/dataset-evidence/evt-018-thermal.jpg', frame: 'FR-018-142', capturedAt: '09:57:24.153', temperatureC: 72.4 },
+  'EVT-240905-021': { ...alignedPair, eventId: 'EVT-240905-021', modelSample: '/dataset-evidence/evt-021-thermal.jpg', frame: 'FR-021-166', capturedAt: '10:02:11.084', temperatureC: 64.8 },
+  'EVT-240905-027': { ...alignedPair, eventId: 'EVT-240905-027', modelSample: '/dataset-evidence/evt-027-thermal.jpg', frame: 'FR-027-203', capturedAt: '10:08:46.927', temperatureC: 48.5 },
+  'EVT-240905-033': { ...alignedPair, eventId: 'EVT-240905-033', modelSample: '/dataset-evidence/evt-033-thermal.jpg', frame: 'FR-033-248', capturedAt: '10:14:09.512', temperatureC: 68.2 },
+  'EVT-240905-041': { ...alignedPair, eventId: 'EVT-240905-041', modelSample: '/dataset-evidence/evt-041-thermal.jpg', frame: 'FR-041-301', capturedAt: '10:19:31.406', temperatureC: 35.1 },
+};
+
+export const evidenceForEvent = (eventId: string) => evidenceAssets[eventId] ?? evidenceAssets['EVT-240905-018'];
+export const findEvidenceForEvent = (eventId: string) => evidenceAssets[eventId];
+export const evidenceSequence = Object.values(evidenceAssets);

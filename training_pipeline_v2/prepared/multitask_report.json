@@ -1,0 +1,98 @@
+{
+  "defect": {
+    "task": "visible_defect_detection",
+    "seed": 20260922,
+    "classes": [
+      "Crack",
+      "Grid",
+      "Spot"
+    ],
+    "splits": {
+      "train": {
+        "images": 1536,
+        "boxes": 1680,
+        "class_boxes": {
+          "Crack": 568,
+          "Grid": 564,
+          "Spot": 548
+        }
+      },
+      "val": {
+        "images": 384,
+        "boxes": 420,
+        "class_boxes": {
+          "Crack": 144,
+          "Grid": 140,
+          "Spot": 136
+        }
+      },
+      "test": {
+        "images": 480,
+        "boxes": 528,
+        "class_boxes": {
+          "Crack": 180,
+          "Grid": 180,
+          "Spot": 168
+        }
+      }
+    }
+  },
+  "segmentation": {
+    "task": "solar_panel_segmentation",
+    "seed": 20260922,
+    "split_policy": "source-grouped",
+    "splits": {
+      "train": {
+        "images": 7833,
+        "objects": 57856,
+        "source_groups": 2364
+      },
+      "val": {
+        "images": 943,
+        "objects": 7041,
+        "source_groups": 295
+      },
+      "test": {
+        "images": 838,
+        "objects": 6005,
+        "source_groups": 295
+      }
+    }
+  },
+  "distributed": {
+    "task": "distributed_pv_detection",
+    "seed": 20260922,
+    "split_policy": "publisher-provided",
+    "splits": {
+      "train": {
+        "images": 2701,
+        "objects": 5903,
+        "source_groups": 2701
+      },
+      "val": {
+        "images": 883,
+        "objects": 1854,
+        "source_groups": 883
+      },
+      "test": {
+        "images": 423,
+        "objects": 1037,
+        "source_groups": 423
+      }
+    }
+  },
+  "cell_anomaly": {
+    "task": "cell_multilabel_classification",
+    "seed": 20260922,
+    "classes": [
+      "poly_wafer",
+      "crack",
+      "inactive"
+    ],
+    "splits": {
+      "test": 302,
+      "val": 302,
+      "train": 1396
+    }
+  }
+}
